@@ -16,11 +16,6 @@
                   <div class="row">
                     <div class="three wide center aligned column">
                       <!-- Avatar -->
-
-                      <div class="avatar-wrapper">
-                          <object class="avatar" data="images/photo.png" role="img" aria-label="My profile picture"></object>
-                      </div>
-
                       <div class="avatar-wrapper">
                           <object class="avatar" data="images/photo.png" role="img" aria-label="My profile picture"></object>
                       </div>
@@ -183,22 +178,40 @@
                 <!-- Likes -->
                 <section>
                     <h3>Нравиться</h3>
-                    <p class="tags small">
+                    <p class="tags small"onclick="evilBreath(event)">
                       ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ ИСТРЕБЛЯТЬ ДЖЕДАЕВ ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ ЗЛОВЕЩЕ ДЫШАТЬ 
                      </section>
-                     
+                     <script>
+                        function evilBreath(event){
+                           var audio = new Audio();
+                           audio.src = 'audio/vader_breath.mp3';
+                           audio.autoplay=true;
+                        }
+                      </script>
                 <!-- Dislikes -->
                 <section>
                     <h3>Не нравиться</h3>
-                    <p class="tags small">
+                    <p class="tags small" >
                        ЛЮБОЙ ВИД ДЕМОКРАТИИ, РОДСТВЕННЫЕ ОТНОШЕНИЯ, БОЛЬШАЯ ЧАСТЬ НАСЕЛЕНИЯ ИМПЕРИИ, ЛУННАЯ СОНАТА ЛЮДВИГА ВАН БЕТХОВЕНА
                     </p>
+                   
                 </section>
                 <!-- Wants -->
                 <section>
                     <h3>Хочу</h3>
                     <p class="tags small bulleted">
                       СКРОМНУЮ ЗВЕЗДУ СМЕРТИ ГОДАМ К ПЯТИДЕСЯТИ И СПОКОЙНУЮ ЖИЗНЬ НА КРАЮ ГАЛАКТИКИВ В КРУГУ ЛЮБЯЩИХ ДРОНОВ И ТЕМНОЙ СТОРОНЫ СИЛЫ</p>
+                </section>
+                <section id="vadersection">
+                    <div class="vader" onclick="sound(event)">
+                    </div>
+                    <script>
+                        function sound(event){
+                          var audio = new Audio();
+                          audio.src = 'audio/sword_sound.mp3';
+                          audio.autoplay = true;
+                        }
+                      </script>
                 </section>
                     </div>
                   </div>
